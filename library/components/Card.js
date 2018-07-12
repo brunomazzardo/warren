@@ -1,13 +1,14 @@
 //@flow
 
 import * as React from 'react';
-import {StyleSheet, View} from 'react-native'
+import {StyleSheet, View,Dimensions} from 'react-native'
 import type { StyleObj } from 'react-native/Libraries/StyleSheet/StyleSheetTypes';
 
 
 type Props = {
     style? : StyleObj,
-    children : React.Node
+    children? : React.Node,
+    index?:number
 }
 
 type State = {}
@@ -25,7 +26,7 @@ class Card extends React.Component<Props, State> {
         ];
 
         return (
-            <View style={compositeStyles}>
+            <View style={compositeStyles} key = {this.props.index} >
                 { this.props.children }
             </View>
         );
@@ -41,6 +42,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderWidth: 0,
         borderRadius: 6,
+        width : Dimensions.get('window').width * 0.80,
         shadowColor: 'black',
         shadowOpacity: 0.4,
         shadowRadius: 1,
