@@ -9,7 +9,8 @@ Temos um foco dentro do Elliot em prospectar pessoas que possuem uma renda acima
 Quem vai prospectar as pessoas com grana é um agente autônomo. Esse agente deve ser capaz de criar uma conta para um clientes diferentes, gerenciar contas de diversos clientes,
  realizar movimentações financeiras com o saldo de cada cliente na plataforma, realizar pequenos trades entre criptos diferentes e acompanhar os rendimentos e perdas de cada um.
 
-O teu desafio vai ser montar um moq desse app. Não temos nada de styleguide definido, o que pode ajudar um pouco é o próprio aplicativo da Warren e do Elliot. Lembrando que esse aplicativo deve ser funcional e super simples de usar.
+O teu desafio vai ser montar um moq desse app. Não temos nada de styleguide definido, o que pode ajudar um pouco é o próprio aplicativo da Warren e do Elliot.
+Lembrando que esse aplicativo deve ser funcional e super simples de usar.
 
 Os requisitos principais são:
 

@@ -1,11 +1,13 @@
 //@flow
 import React from "react";
-import {View,Text} from "react-native";
+import {View, Text, TouchableHighlight, Dimensions} from "react-native";
 import type {Client} from '../../screens/ClientScreen'
 import Card from "./Card";
 import TextField from "./TextField";
 import ViewSeparator from "./ViewSeparator";
 import {Foundation} from "@expo/vector-icons";
+import Swipeable from 'react-native-swipeable';
+
 
 
 
@@ -23,11 +25,21 @@ class ClientCard extends React.Component<Props,State> {
 
  }
 
+
+     rightButtons = [
+        <TouchableHighlight>
+            <Text>Button 1</Text>
+        </TouchableHighlight>,
+    ];
+
+
  render() {
-     const {client} = this.props
+  const {client} = this.props
   return(
    <Card style = {{marginBottom:14}}>
-       <TextField field={'Nome'}  value={client.name} contentContainerStyle={{padding: 14}} textStyle = {{color:'#0e3a63',fontSize:16}} />
+       <Swipeable children={this.rightButtons}  rightButtonWidth = {60}  style={{width : Dimensions.get('window').width * 0.80}} >
+            <TextField field={'Nome'}  value={client.name} contentContainerStyle={{padding: 14}} textStyle = {{color:'#0e3a63',fontSize:16}} />
+       </Swipeable>
        <View style={{flexDirection: 'row',alignItems: 'center',justifyContent:'space-between'}} >
            <Text style={{color:'#0e3a63',fontSize:16,paddingLeft: 14,paddingBottom: 14}} >
                Principal Ativo
