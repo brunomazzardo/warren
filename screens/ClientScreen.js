@@ -1,8 +1,9 @@
 //@flow
 import React from "react";
-import {View, ScrollView} from "react-native";
+import {View, ScrollView, StyleSheet} from "react-native";
 import ClientCard from "../library/components/ClientCard";
 import {ClientService} from "../services/ClientService";
+import {LinearGradient} from "expo";
 
 
 
@@ -36,13 +37,22 @@ class ClientScreen extends React.Component<Props,State> {
 
  render() {
   return(
-   <ScrollView contentContainerStyle={{justifyContent: 'center',flex:1,alignItems: 'center'}} >
-       {this.state.clientList.map((client: Client) => <ClientCard key = {client.id} client={client}/>)}
-   </ScrollView>
+      <LinearGradient colors={['#F4C854', '#F4C354', '#F6D554','#F8E255','#FAF255','#FBFA55']} style={styles.container}>
+         <ScrollView contentContainerStyle={{justifyContent: 'center',flex:1,alignItems: 'center'}} >
+          {this.state.clientList.map((client: Client) => <ClientCard key = {client.id} client={client}/>)}
+         </ScrollView>
+      </LinearGradient>
   );
  }
 }
 
 
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+
+});
 
 export default ClientScreen;

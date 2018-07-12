@@ -25,7 +25,7 @@ class LoginScreen extends React.Component<Props,State> {
 
  render() {
   return(
-      <LinearGradient colors={['#F4C653', '#F4C553', '#FBF855']} style={styles.container}>
+      <LinearGradient colors={['#F4C854', '#F4C354', '#F6D554','#F8E255','#FAF255','#FBFA55']} style={styles.container}>
           <View style={{justifyContent: 'center',flex:1,alignItems:'center'}} >
               <Card>
                   <Text style={{padding: 14,color:'#0e3a63',fontSize:24}} >

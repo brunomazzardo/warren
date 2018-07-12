@@ -5,8 +5,13 @@ export class ClientService {
         return  [
                 {
                     id:1,
-                    name:'Teste 1',
+                    name:'Bruno Mazzardo',
                     number:999885644
+                },
+                {
+                    id:2,
+                    name:'Barcellos Bruno',
+                    number:994234516
                 }
             ]
     }
