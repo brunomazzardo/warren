@@ -37,9 +37,12 @@ class ClientCard extends React.Component<Props,State> {
   const {client} = this.props
   return(
    <Card style = {{marginBottom:14}}>
-       <Swipeable children={this.rightButtons}  rightButtonWidth = {60}  style={{width : Dimensions.get('window').width * 0.80}} >
-            <TextField field={'Nome'}  value={client.name} contentContainerStyle={{padding: 14}} textStyle = {{color:'#0e3a63',fontSize:16}} />
-       </Swipeable>
+           <View style={{flexDirection: 'row',alignItems: 'center',justifyContent:'space-between'}} >
+               <Text style={{color:'#0e3a63',fontSize:16,padding:14}} >
+                   {client.name}
+               </Text>
+               <Foundation name = {'info'} style = {{paddingRight: 14}} size = {24} />
+           </View>
        <View style={{flexDirection: 'row',alignItems: 'center',justifyContent:'space-between'}} >
            <Text style={{color:'#0e3a63',fontSize:16,paddingLeft: 14,paddingBottom: 14}} >
                Principal Ativo

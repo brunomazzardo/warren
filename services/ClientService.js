@@ -12,8 +12,28 @@ export class ClientService {
                     id:2,
                     name:'Barcellos Bruno',
                     number:994234516
-                }
-            ]
+                },
+                {
+                    id:3,
+                    name:'Barcellos Bruno',
+                    number:994234516
+                },
+            {
+                id:4,
+                name:'Barcellos Bruno',
+                number:994234516
+            },
+            {
+                id:5,
+                name:'Barcellos Bruno',
+                number:994234516
+            },
+            {
+                id:6,
+                name:'Barcellos Bruno',
+                number:994234516
+            }
+        ]
     }
 
 

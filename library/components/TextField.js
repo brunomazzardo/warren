@@ -10,7 +10,7 @@ type State = {}
 
 type Props = {
     column?:boolean,
-    field:string,
+    field:string | number,
     value:string | number,
     textStyle?:StyleObj,
     fieldStyle?:StyleObj,

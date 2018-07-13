@@ -1,11 +1,10 @@
 //@flow
 import React from "react";
 import {View} from "react-native";
-import { createBottomTabNavigator, createStackNavigator, BottomTabBar } from 'react-navigation';
+import { createBottomTabNavigator, createStackNavigator } from 'react-navigation';
 import LoginScreen from "../screens/LoginScreen";
 import ClientScreen from "../screens/ClientScreen";
 import ConfigScreen from "../screens/ConfigScreen";
-const TabBarComponent = (props) => (<BottomTabBar {...props} />);
 import {Ionicons} from "@expo/vector-icons";
 
 
@@ -47,7 +46,7 @@ const ApplicationRouter = () => {
 export const createAppStack = () => {
     return createStackNavigator({
         Login: LoginScreen,
-        LoggedInTab: ApplicationRouter()
+        LoggedInTab: ClientScreen
     },{
         headerMode: 'none',
     })}
